@@ -1,0 +1,6 @@
+---
+Name: graphqlmanymanyjoin
+---
+SilverStripe\GraphQL\Scaffolding\Scaffolders\DataObjectScaffolder:
+  extensions:
+    - Internetrix\GraphQLManyManyJoin\DataObjectScaffolderExtension
