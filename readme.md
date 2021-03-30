@@ -18,19 +18,23 @@ Internetrix\GraphQLManyManyJoin\DataObjectScaffolderExtension:
 Don't forget to allow read operations and make the necessary fields available on both the list object and the through object
 
 ```
-SilverStripe\GraphQL\Controller:
-  schema:
-    scaffolding:
-      types:
-        <list object>:
-          fields: '*'
-          operations:
-            read: true
-        <through object>:
-          fields: '*'
-          operations:
-            read: true
+SilverStripe\GraphQL\Manager:
+  schemas:
+    default:    #default schema
+      scaffolding:
+        types:
+          <list object>:
+            fields: '*'
+            operations:
+              read: true
+          <through object>:
+            fields: '*'
+            operations:
+              read: true
 ```
+
+####Todo:
+* Expose the fields defined in `many_many_extraFields`. (only handles through objects at the moment)
 
 #### Notes:
 This is pretty hacky, but it works.
