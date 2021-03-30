@@ -1,6 +1,7 @@
 ---
 Name: graphqlmanymanyjoin
 ---
-SilverStripe\GraphQL\Scaffolding\Scaffolders\DataObjectScaffolder:
-  extensions:
-    - Internetrix\GraphQLManyManyJoin\Extensions\DataObjectScaffolderExtension
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\GraphQL\Schema\Registry\PluginRegistry:
+    constructor:
+      - 'Internetrix\GraphQLManyManyJoin\Plugins\ExposeManyManyJoinPlugin'
